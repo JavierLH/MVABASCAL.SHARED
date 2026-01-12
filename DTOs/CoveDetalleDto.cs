@@ -1,41 +1,50 @@
-﻿namespace SistemaAduanero.Shared.DTOs
+﻿using SistemaAduanero.Shared.DTOs;
+
+public class CoveDetalleDto
 {
-    public class CoveDetalleDto
-    {
-        // <cove>
-        public string NumeroCove { get; set; }
+    // Identificadores Generales
+    public string? NumeroCove { get; set; }
+    public string? Incoterm { get; set; }
+    public bool ExisteVinculacion { get; set; }
+    public string? MetodoValoracion { get; set; }
+    public string? NumeroPedimento { get; set; }
+    public int? Patente { get; set; }
+    public int? Aduana { get; set; }
 
-        // <incoterm>
-        public string? Incoterm { get; set; }
+    // Listas 1:N
+    public List<PrecioPagadoDto> PreciosPagados { get; set; } = new();
+    public List<PrecioPorPagarDto> PreciosPorPagar { get; set; } = new();
+    public List<CompensacionDto> Compensaciones { get; set; } = new();
 
-        // <existeVinculacion> (XML usa 0/1, aquí usamos bool para facilitar)
-        public bool ExisteVinculacion { get; set; }
+    // Incrementables y Decrementables
+    public List<ConceptoValorDto> Incrementables { get; set; } = new();
+    public List<ConceptoValorDto> Decrementables { get; set; } = new();
+}
 
-        // <pedimento>
-        public string? NumeroPedimento { get; set; }
-        public int Patente { get; set; }
-        public int Aduana { get; set; }
+// DTOs auxiliares basados en tu XML
+public class PrecioPagadoDto
+{
+    public DateTime? FechaPago { get; set; }
+    public decimal Total { get; set; }
+    public string TipoPago { get; set; }
+    public string TipoMoneda { get; set; }
+    public decimal TipoCambio { get; set; }
+}
 
-        // <precioPagado>
-        public DateTime FechaPago { get; set; } = DateTime.Now;
-        public decimal TotalPago { get; set; }
-        public string? TipoPago { get; set; } = "FORPAG.TE"; // Valor por defecto del XML
-        public string? MonedaPago { get; set; } = "USD";
-        public decimal TipoCambioPago { get; set; }
+public class PrecioPorPagarDto
+{
+    public DateTime? FechaPago { get; set; }
+    public decimal Total { get; set; }
+    public string SituacionNoFechaPago { get; set; }
+    public string TipoPago { get; set; }
+    public string TipoMoneda { get; set; }
+    public decimal TipoCambio { get; set; }
+}
 
-        // <metodoValoracion>
-        public string? MetodoValoracion { get; set; } = "VALADU.VTM";
-
-        // <valorEnAduana> (Totales calculados)
-        public decimal TotalPrecioPagado { get; set; }
-        public decimal TotalPrecioPorPagar { get; set; }
-        public decimal TotalIncrementables { get; set; }
-        public decimal TotalDecrementables { get; set; }
-        public decimal TotalValorAduana { get; set; }
-        public List<IncrementableDto> Incrementables { get; set; } = new List<IncrementableDto>();
-
-        // NOTA: Los <incrementables> individuales (la lista) 
-        // los manejaremos en la tabla de conceptos que ya creamos, 
-        // vinculándolos a este COVE en el futuro.
-    }
+public class CompensacionDto
+{
+    public DateTime? Fecha { get; set; }
+    public string Motivo { get; set; }
+    public string PrestacionMercancia { get; set; }
+    public string TipoPago { get; set; }
 }

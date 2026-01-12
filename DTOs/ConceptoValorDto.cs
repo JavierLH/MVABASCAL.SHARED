@@ -1,10 +1,20 @@
-﻿namespace SistemaAduanero.Shared.DTOs
+﻿using System;
+
+namespace SistemaAduanero.Shared.DTOs
 {
     public class ConceptoValorDto
     {
-        public string TipoConcepto { get; set; } = "INCREMENTABLE"; // O DECREMENTABLE
-        public string Descripcion { get; set; }
+        // Puede servir para guardar "INCRE.CG" o "DECRE.GT"
+        public string TipoIncrementable { get; set; } = null!;
+
+        public DateTime? FechaErogacion { get; set; }
+
         public decimal Importe { get; set; }
-        public string Moneda { get; set; } = "MXN";
+
+        public string? TipoMoneda { get; set; } // XML: <tipoMoneda>
+
+        public decimal? TipoCambio { get; set; } // XML: <tipoCambio>
+
+        public bool? ACargoImportador { get; set; } // XML: <aCargoImportador>
     }
 }
