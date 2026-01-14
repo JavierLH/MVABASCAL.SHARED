@@ -9,6 +9,7 @@ namespace SistemaAduanero.Shared.DTOs
         public class ManifestacionDto
         {
             public int ManifestacionId { get; set; }
+            public int ClienteId { get; set; }
             public string NumeroPedimento { get; set; }
 
             // Propiedad de lectura que vendrá del Cliente.Rfc en el backend

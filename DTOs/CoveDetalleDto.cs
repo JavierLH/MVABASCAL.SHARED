@@ -3,6 +3,7 @@
 public class CoveDetalleDto
 {
     // Identificadores Generales
+    public string IdTemporal { get; set; } = Guid.NewGuid().ToString();
     public string? NumeroCove { get; set; }
     public string? Incoterm { get; set; }
     public bool ExisteVinculacion { get; set; }

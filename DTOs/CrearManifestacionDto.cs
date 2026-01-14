@@ -4,6 +4,7 @@ namespace SistemaAduanero.Shared.DTOs
 {
     public class CrearManifestacionDto
     {
+
         public string ReferenciaAdmin { get; set; } // Pedimento
 
         // Lo mantenemos en el DTO para la UI, aunque en BD se use el del Cliente.
@@ -16,7 +17,7 @@ namespace SistemaAduanero.Shared.DTOs
         public decimal TotalDecrementables { get; set; }
         public decimal TotalValorAduana { get; set; }
         public int ClienteId { get; set; }
-
+        public int? ClienteIdSeleccionado { get; set; }
         // Esta propiedad nos sirve para mostrar el RFC en el campo de solo lectura
         public ClienteDto? Cliente { get; set; }
 
