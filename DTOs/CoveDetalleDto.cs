@@ -5,14 +5,15 @@ namespace SistemaAduanero.Shared.DTOs
     {
         // Identificadores Generales
         public int CoveId { get; set; }
+        public int ManifestacionId { get; set; }
         public string IdTemporal { get; set; } = Guid.NewGuid().ToString();
         public string? NumeroCove { get; set; }
         public string? Incoterm { get; set; }
         public bool ExisteVinculacion { get; set; }
         public string? MetodoValoracion { get; set; }
         public string? NumeroPedimento { get; set; }
-        public int? Patente { get; set; }
-        public int? Aduana { get; set; }
+        public string? Patente { get; set; }
+        public string? Aduana { get; set; }
 
         // Listas 1:N
         public List<PrecioPagadoDto> PreciosPagados { get; set; } = new();
@@ -35,6 +36,7 @@ namespace SistemaAduanero.Shared.DTOs
         public string TipoPago { get; set; }
         public string TipoMoneda { get; set; }
         public decimal TipoCambio { get; set; }
+        public string? DescripcionOtroPago { get; set; }
     }
 
     public class PrecioPorPagarDto
@@ -45,6 +47,8 @@ namespace SistemaAduanero.Shared.DTOs
         public string TipoPago { get; set; }
         public string TipoMoneda { get; set; }
         public decimal TipoCambio { get; set; }
+        public string? DescripcionOtroPago { get; set; }
+
     }
 
     public class CompensacionDto
@@ -53,5 +57,7 @@ namespace SistemaAduanero.Shared.DTOs
         public string Motivo { get; set; }
         public string PrestacionMercancia { get; set; }
         public string TipoPago { get; set; }
+        public string? DescripcionOtroPago { get; set; }
+
     }
 }

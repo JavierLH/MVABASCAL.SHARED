@@ -11,10 +11,11 @@ namespace SistemaAduanero.Shared.DTOs
             public int ManifestacionId { get; set; }
             public int ClienteId { get; set; }
             public string NumeroPedimento { get; set; }
+            public string Referencia { get; set; }
 
             // Propiedad de lectura que vendrá del Cliente.Rfc en el backend
             public string? RfcImportador { get; set; }
-
+            public string? RazonSocial { get; set; }
             public decimal? TotalPrecioPagado { get; set; }
             public decimal? TotalPrecioPorPagar { get; set; }
             public decimal? TotalIncrementables { get; set; }
@@ -35,8 +36,8 @@ namespace SistemaAduanero.Shared.DTOs
         public string? NumeroPedimento { get; set; }
         public string? Incoterm { get; set; }
         public bool? ExisteVinculacion { get; set; }
-        public int? Patente { get; set; }
-        public int? Aduana { get; set; }
+        public string? Patente { get; set; }
+        public string? Aduana { get; set; }
         public string? MetodoValoracion { get; set; }
 
         // === LISTAS 1:N (NUEVAS) ===
