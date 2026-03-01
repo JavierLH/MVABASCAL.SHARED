@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SistemaAduanero.Shared.DTOs
 {
-    [Table("Clientes")] // Mapea a tu tabla existente
+    [Table("Clientes")] 
     public class ClienteDto
     {
         [Key]
