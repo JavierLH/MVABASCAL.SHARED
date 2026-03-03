@@ -27,6 +27,8 @@ namespace SistemaAduanero.Shared.DTOs
 
         // Nueva Lista 1:N (RFCs de Consulta)
         public List<ConsultaRfcDto> Consultas { get; set; } = new();
+        public List<DocumentoExpedienteDto> Documentos { get; set; } = new();
+        public List<NotaExpedienteDto> HistorialNotas { get; set; } = new();
     }
 
     public class ConsultaRfcDto
