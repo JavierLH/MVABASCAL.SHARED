@@ -26,6 +26,8 @@ namespace SistemaAduanero.Shared.DTOs
             public DateTime? FechaRegistro { get; set; }
             public List<ManifestacionCoveDto> ManifestacionCoves { get; set; } = new();
             public List<ConsultaRfcDto> Consultas { get; set; } = new();
+            public List<ManifestacionEdocumentDto> Edocuments { get; set; } = new();
+
             public List<DocumentoExpedienteDto> Documentos { get; set; } = new();
             public List<NotaExpedienteDto> HistorialNotas { get; set; } = new();
         }
@@ -73,4 +75,14 @@ namespace SistemaAduanero.Shared.DTOs
         public bool? ACargoImportador { get; set; }
         public string TipoConcepto { get; set; } // "INCREMENTABLE" o "DECREMENTABLE"
     }
+
+    // DTO PARA EDOCUMENT (Agregado aquí)
+    public class ManifestacionEdocumentDto
+    {
+        public int AnexoId { get; set; }
+        public string NumeroEdocument { get; set; } = string.Empty;
+        public string? Descripcion { get; set; }
+    }
+
+
 }
