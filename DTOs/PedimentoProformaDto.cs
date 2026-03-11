@@ -68,12 +68,13 @@ namespace SistemaAduanero.Shared.DTOs
 
     public class Partidas
     {
+        public string PartidaId { get; set; }
         public string Fraccion {  get; set; }
         public string IdentificacionComercial { get; set; }
         public string Vinculacion {  get; set; }
         public string MetodoValoracion  { get; set; } 
 
-        public double VALADUUSD { get; set; }
+        public string VALADUUSD { get; set; } // ESTE ES EL QUE SE TOMA POR SI EL METODO DE VALORACION EMPATA CON OTRO
 
     }
 
