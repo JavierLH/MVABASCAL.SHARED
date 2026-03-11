@@ -51,5 +51,30 @@ namespace SistemaAduanero.Shared.DTOs
         public string? Complemento2 { get; set; }
         public string? Complemento3 { get; set; }
 
+        public List<string>? ListaClaveCoves { get; set; } = new List<string>();
+        public List<string>? ListaFactura {  get; set; }
+
     }
+
+    public class AnexoPedimento
+    {
+
+        public string NumeroFactura { get; set; }
+        public string COVE {  get; set; }
+
+        public List<Partidas> Partidas { get; set; }
+
+    }
+
+    public class Partidas
+    {
+        public string Fraccion {  get; set; }
+        public string IdentificacionComercial { get; set; }
+        public string Vinculacion {  get; set; }
+        public string MetodoValoracion  { get; set; } 
+
+        public double VALADUUSD { get; set; }
+
+    }
+
 }
