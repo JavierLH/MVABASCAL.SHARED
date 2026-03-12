@@ -53,6 +53,10 @@ namespace SistemaAduanero.Shared.DTOs
 
         public List<string>? ListaClaveCoves { get; set; } = new List<string>();
         public List<string>? ListaFactura {  get; set; }
+        public string? Vinculacion { get; set; }
+        public string[]? Incrementales { get; set; }
+        public string[]? Decrementables { get; set; }
+        public List<AnexoPedimento>? Anexos { get; set; }
 
     }
 
