@@ -61,6 +61,7 @@ namespace SistemaAduanero.Shared.DTOs
 
         public string NumeroFactura { get; set; }
         public string COVE {  get; set; }
+        public string MetodoValoracion { get; set; }
 
         public List<Partidas> Partidas { get; set; }
 
