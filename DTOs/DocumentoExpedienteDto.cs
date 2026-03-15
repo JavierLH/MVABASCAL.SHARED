@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,5 +21,10 @@ namespace SistemaAduanero.Shared.DTOs
         // --- CONTROLES DE REVISIÓN ---
         public bool Revisado { get; set; }
         public bool Exento { get; set; }
+
+        // --- CAMPOS PARA VUCEM ---
+        public string? Edocument { get; set; }
+        public string? NOperacion { get; set; }
+        public bool EnviarVucem { get; set; }
     }
 }
