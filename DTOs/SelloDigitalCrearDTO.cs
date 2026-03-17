@@ -1,17 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
-namespace SistemaAduanero.Shared.DTOs
+namespace SistemaAduanero.API.DTOs // O la carpeta donde lo pusiste
 {
     public class SelloDigitalCrearDTO
     {
         [Required]
-        public string RFC { get; set; }
-
-        public string RazonSocial { get; set; }
+        public int ClienteId { get; set; }
 
         [Required]
-        public IFormFile ArchivoCer { get; set; } // Representa el archivo físico que sube el usuario
+        public IFormFile ArchivoCer { get; set; }
 
         [Required]
         public IFormFile ArchivoKey { get; set; }
