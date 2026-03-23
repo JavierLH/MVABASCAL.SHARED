@@ -27,5 +27,6 @@ namespace SistemaAduanero.Shared.DTOs
         public string? NOperacion { get; set; }
         public bool EnviarVucem { get; set; }
         public int? IdTipoDocumentoVucem { get; set; }
+        public bool SeEnviaAVucem { get; set; }
     }
 }
