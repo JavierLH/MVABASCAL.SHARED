@@ -22,6 +22,7 @@ namespace SistemaAduanero.Shared.DTOs
             public decimal? TotalDecrementables { get; set; }
             public decimal? TotalValorAduana { get; set; }
             public string EstadoEnvio { get; set; }
+            public string? NumeroOperacionVucem { get; set; }
             public int Progreso { get; set; }
             public DateTime? FechaRegistro { get; set; }
             public List<ManifestacionCoveDto> ManifestacionCoves { get; set; } = new();
