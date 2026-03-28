@@ -5,7 +5,7 @@ namespace SistemaAduanero.Shared.DTOs
     public class CrearManifestacionDto
     {
 
-        public string ReferenciaAdmin { get; set; } // Pedimento
+        public string? ReferenciaAdmin { get; set; } // Pedimento
         public string Referencia { get; set; }
         public string EstadoEnvio { get; set; } = "BORRADOR";
         // Lo mantenemos en el DTO para la UI, aunque en BD se use el del Cliente.
