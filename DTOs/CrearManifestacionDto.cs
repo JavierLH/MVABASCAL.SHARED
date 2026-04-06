@@ -20,7 +20,7 @@ namespace SistemaAduanero.Shared.DTOs
         public int ClienteId { get; set; }
         public int? ClienteIdSeleccionado { get; set; }
         public string? NumeroOperacionVucem { get; set; }
-        public string FolioManifestacion { get; set; }
+        public string? FolioManifestacion { get; set; }
 
         // Esta propiedad nos sirve para mostrar el RFC en el campo de solo lectura
         public ClienteDto? Cliente { get; set; }
