@@ -10,8 +10,8 @@ namespace SistemaAduanero.Shared.DTOs
         {
             public int ManifestacionId { get; set; }
             public int ClienteId { get; set; }
-            public string NumeroPedimento { get; set; }
-            public string Referencia { get; set; }
+            public string? NumeroPedimento { get; set; }
+            public string? Referencia { get; set; }
 
             // Propiedad de lectura que vendrá del Cliente.Rfc en el backend
             public string? RfcImportador { get; set; }
@@ -23,7 +23,7 @@ namespace SistemaAduanero.Shared.DTOs
             public decimal? TotalValorAduana { get; set; }
             public string EstadoEnvio { get; set; }
             public string? NumeroOperacionVucem { get; set; }
-            public string FolioManifestacion { get; set; }
+            public string? FolioManifestacion { get; set; }
             public int Progreso { get; set; }
             public DateTime? FechaRegistro { get; set; }
             public List<ManifestacionCoveDto> ManifestacionCoves { get; set; } = new();
