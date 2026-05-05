@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace SistemaAduanero.Shared.DTOs
@@ -32,6 +32,8 @@ namespace SistemaAduanero.Shared.DTOs
 
             public List<DocumentoExpedienteDto> Documentos { get; set; } = new();
             public List<NotaExpedienteDto> HistorialNotas { get; set; } = new();
+            
+            public bool? Activo { get; set; }
         }
     }
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -57,6 +57,8 @@ namespace SistemaAduanero.Shared.DTOs
         public string NombreRol { get; set; } = null!;
 
         public string? Descripcion { get; set; }
+
+        public string? Contraseña { get; set; }
 
         public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
 
