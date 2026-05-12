@@ -44,6 +44,7 @@ namespace SistemaAduanero.Shared.DTOs
 
         public virtual Role? Rol { get; set; }
         public virtual ICollection<UsuarioCliente> UsuarioClientes { get; set; } = new List<UsuarioCliente>();
+        public virtual ICollection<UsuarioCorreo> CorreosExtras { get; set; } = new List<UsuarioCorreo>();
 
         // === NUEVO: AUXILIAR PARA EL FORMULARIO (No va a la BD) ===
         [NotMapped]
