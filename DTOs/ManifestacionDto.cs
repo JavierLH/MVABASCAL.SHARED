@@ -34,6 +34,18 @@ namespace SistemaAduanero.Shared.DTOs
             public List<NotaExpedienteDto> HistorialNotas { get; set; } = new();
             
             public bool? Activo { get; set; }
+
+            public string EstatusCaptura
+            {
+                get
+                {
+                    bool tieneCliente = ClienteId > 0;
+                    bool tieneCoves = ManifestacionCoves != null && ManifestacionCoves.Any();
+                    bool tieneTotales = TotalValorAduana > 0;
+
+                    return (tieneCliente && tieneCoves && tieneTotales) ? "COMPLETO" : "BORRADOR";
+                }
+            }
         }
     }
 

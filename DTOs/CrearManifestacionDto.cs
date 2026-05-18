@@ -7,7 +7,7 @@ namespace SistemaAduanero.Shared.DTOs
 
         public string? ReferenciaAdmin { get; set; } // Pedimento
         public string Referencia { get; set; }
-        public string EstadoEnvio { get; set; } = "BORRADOR";
+        public string EstadoEnvio { get; set; } = "PENDIENTE";
         // Lo mantenemos en el DTO para la UI, aunque en BD se use el del Cliente.
         public string? RfcImportador { get; set; }
 
@@ -21,6 +21,7 @@ namespace SistemaAduanero.Shared.DTOs
         public int? ClienteIdSeleccionado { get; set; }
         public string? NumeroOperacionVucem { get; set; }
         public string? FolioManifestacion { get; set; }
+
 
         // Esta propiedad nos sirve para mostrar el RFC en el campo de solo lectura
         public ClienteDto? Cliente { get; set; }
