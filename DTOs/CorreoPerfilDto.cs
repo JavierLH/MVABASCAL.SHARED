@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,7 @@ namespace SistemaAduanero.Shared.DTOs
     {
         public int Id { get; set; } // Opcional, dependiendo de si actualizas por ID o haces borrado/inserción
         public string Email { get; set; } = string.Empty;
+        public bool EsPrincipal { get; set; }
     }
 
     // DTO para recibir la actualización desde el frontend
